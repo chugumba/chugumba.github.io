@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример формы</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>ЗАПОЛНИТЕ ВСЕ ПОЛЯ!</legend>
+      <div>
+        <label for="name">Введите ФИО:</label><br>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="password">Введите пароль (макс. 10 символов):</label><br>
+        <input type="password" id="password" name="password" maxlength="10" required>
+      </div>
+      <div>
+        <label for="course">На каком курсе вы учитесь? (от 1 до 5):</label><br>
+        <input type="number" id="course" name="course" min="1" max="5" value="3">
+      </div>
+      <div>
+        <label for="programm">Какие курсы вы хотите пройти?:</label><br>
+        <input type="checkbox" id="photoshop" name="photoshop">
+        <label for="photoshop">Курсы по Photoshop</label><br>
+        <input type="checkbox" id="dreamweaver" name="dreamweaver">
+        <label for="dreamweaver">Курсы по Adobe Dreamweaver</label><br>
+        <input type="checkbox" id="php" name="php">
+        <label for="php">Курсы по PHP</label><br>
+        <input type="checkbox" id="mysql" name="mysql">
+        <label for="mysql">Курсы по MySQL</label><br>
+      </div>
+      <div>
+        <label for="education">Выберете форму обучения:</label><br>
+        <select id="education" name="education">
+          <option value="Очная">Очная</option>
+          <option value="Заочная">Заочная</option>
+          <option value="На дому">На дому</option>
+        </select>
+      </div>
+      <div>
+        <label for="comments">Введите свои данные:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="55"></textarea>
+      </div>
+      <div>
+        <label for="residence">Место проживания:</label><br>
+        <input type="text" id="residence" name="residence" value="Санкт-Петербург" readonly>
+      </div>
+      <div>
+        <label for="placeOfBirth">Место рождения:</label><br>
+        <input type="text" id="placeOfBirth" name="placeOfBirth" autofocus>
+      </div>
+      <div>
+        <label for="login">Логин (2 строчные, 3 прописные латинские буквы):</label><br>
+        <input type="text" id="login" name="login" pattern="[a-z]{2}[A-Z]{3}" title="Два строчных и три прописных латинских буквы (например sdSDA)." required>
+      </div>
+    </fieldset>
+    <div>
+      <button type="submit">Готово</button>
+      <button type="reset">Отмена</button>
+  </form>
+</body>
+</html>
